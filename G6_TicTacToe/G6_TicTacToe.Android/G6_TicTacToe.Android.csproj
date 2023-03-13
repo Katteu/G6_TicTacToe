@@ -96,10 +96,10 @@
     <AndroidResource Include="Resources\mipmap-anydpi-v26\tictactoelogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-mdpi\tictactoelogo.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\tictactoelogo.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\mipmap-hdpi\tictactoelogo.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\tictactoelogo.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\mipmap-xhdpi\tictactoelogo.png" />
