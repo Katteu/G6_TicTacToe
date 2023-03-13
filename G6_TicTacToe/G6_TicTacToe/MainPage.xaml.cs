@@ -23,6 +23,7 @@ namespace G6_TicTacToe
             if (turn == 1)
             {
                 btn.Text = "X";
+                btn.BackgroundColor = Color.FromHex("#FFFF8F");
                 turn = 0;
                 LabelO.Text = "O Player's turn";
                 LabelX.Text = "X Player waits";
@@ -31,6 +32,7 @@ namespace G6_TicTacToe
             {
                 btn.Text = "O";
                 turn = 1;
+                btn.BackgroundColor = Color.FromHex("#87CEEB");
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
             }
@@ -110,6 +112,7 @@ namespace G6_TicTacToe
             foreach(Button btn in parentElem1.Children)
             {
                 btn.Text = "";
+                btn.BackgroundColor = Color.Gray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
@@ -118,6 +121,7 @@ namespace G6_TicTacToe
             foreach (Button btn in parentElem2.Children)
             {
                 btn.Text = "";
+                btn.BackgroundColor = Color.Gray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
@@ -126,6 +130,7 @@ namespace G6_TicTacToe
             foreach (Button btn in parentElem3.Children)
             {
                 btn.Text = "";
+                btn.BackgroundColor = Color.Gray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
