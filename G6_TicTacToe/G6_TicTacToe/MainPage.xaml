@@ -1,24 +1,131 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="G6_TicTacToe.MainPage">
+<ContentPage
+    x:Class="TicTacTest.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <Grid BackgroundColor="White">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="1.5*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2.5*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition Width="1.5*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="5"
+            BackgroundColor="White"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
+            Text="Tic-Tac-Toe"
+            VerticalTextAlignment="Center" />
+        <Label
+            Grid.Row="2"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="5"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="X Player's Turn"
+            TextColor="Red"
+            VerticalTextAlignment="Center" />
+        <Button
+            x:Name="EmptySlot1"
+            Grid.Row="4"
+            Grid.Column="1"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot1_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot2"
+            Grid.Row="5"
+            Grid.Column="1"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot2_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot3"
+            Grid.Row="6"
+            Grid.Column="1"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot3_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot4"
+            Grid.Row="4"
+            Grid.Column="2"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot4_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot5"
+            Grid.Row="5"
+            Grid.Column="2"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot5_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot6"
+            Grid.Row="6"
+            Grid.Column="2"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot6_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot7"
+            Grid.Row="4"
+            Grid.Column="3"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot7_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot8"
+            Grid.Row="5"
+            Grid.Column="3"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot8_Clicked"
+            Text="-" />
+        <Button
+            x:Name="EmptySlot9"
+            Grid.Row="6"
+            Grid.Column="3"
+            BackgroundColor="Gray"
+            Clicked="EmptySlot9_Clicked"
+            Text="-" />
+        <Label
+            Grid.Row="8"
+            Grid.ColumnSpan="5"
+            FontSize="20"
+            HorizontalTextAlignment="Center"
+            Text="0 Player waits"
+            TextColor="Blue"
+            VerticalTextAlignment="Center" />
+        <Button
+            x:Name="Reset"
+            Grid.Row="9"
+            Grid.Column="1"
+            Grid.ColumnSpan="3"
+            BackgroundColor="Green"
+            CornerRadius="5"
+            FontSize="20"
+            Clicked="Reset_Clicked"
+            Text="Reset" />
+    </Grid>
 
 </ContentPage>
