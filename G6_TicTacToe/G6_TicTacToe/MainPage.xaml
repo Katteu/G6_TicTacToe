@@ -3,22 +3,77 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="G6_TicTacToe.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
-    </StackLayout>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="0">
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Padding="0,25,0,0">
+            <Image x:Name="logo" />
+        </StackLayout>
+        <StackLayout>
+            <Grid HorizontalOptions="Center" VerticalOptions="Center" Padding="20" ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2.5*" />
+                    <ColumnDefinition Width="2.5*" />
+                    <ColumnDefinition Width="2.5*" />
+                </Grid.ColumnDefinitions>
 
+                <Frame HorizontalOptions="Center" 
+                       Grid.Row="0" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="3"
+                       CornerRadius="50"
+                       BackgroundColor="#FFFF8F"
+                       Margin="5">
+                    <Label x:Name="LabelX"
+                       HorizontalOptions="Center"
+                       Text="X Player's turn" 
+                       TextColor="#FFBF00" 
+                       FontSize="18" 
+                       FontAttributes="Bold"/>
+                </Frame>
+
+                <Frame HorizontalOptions="Center" 
+                       Grid.Row="1" 
+                       Grid.Column="0" 
+                       Grid.ColumnSpan="3"
+                       CornerRadius="50"
+                       Margin="5"
+                       BackgroundColor="#87CEEB">
+                    <Label x:Name="LabelO" 
+                       HorizontalOptions="Center" 
+                       Text="O Player waits" 
+                       TextColor="#00008B" 
+                       FontSize="18" 
+                       FontAttributes="Bold,Italic"/>
+                </Frame>
+
+                <StackLayout x:Name="parentElem1" Grid.Row="2" Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="3">
+                    <Button x:Name="buttonOne" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                    <Button x:Name="buttonTwo" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                    <Button x:Name="buttonThree" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                </StackLayout>
+                <StackLayout x:Name="parentElem2" Grid.Row="3" Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="3">
+                    <Button x:Name="buttonFour" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                    <Button x:Name="buttonFive" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                    <Button x:Name="buttonSix" Text="" CornerRadius="50" Margin="10" Clicked="btnClicked"/>
+                </StackLayout>
+                <StackLayout x:Name="parentElem3" Grid.Row="4" Orientation="Horizontal" HorizontalOptions="Center" Grid.Column="0" Grid.ColumnSpan="3">
+                    <Button x:Name="buttonSeven" Text="" CornerRadius="50" Margin="10" 
+                            Clicked="btnClicked"/>
+                <Button x:Name="buttonEight" Text="" CornerRadius="50" Margin="10" 
+                            Clicked="btnClicked"/>
+                <Button x:Name="buttonNine" Text="" CornerRadius="50" Margin="10" 
+                            Clicked="btnClicked"/>
+                </StackLayout>
+                <Button x:Name="resetBtn" Text="Reset" Margin="10" BackgroundColor="#097969" TextColor="White" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"
+                        Clicked="resetClicked"/>
+            </Grid>
+        </StackLayout>
+    </StackLayout>
 </ContentPage>
