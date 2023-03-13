@@ -14,7 +14,6 @@ namespace G6_TicTacToe
         public MainPage()
         {
             InitializeComponent();
-            logo.Source = ImageSource.FromResource("G6_TicTacToe.Images.tictactoelogo.png");
         }
 
         private void btnClicked(object sender, EventArgs e)
@@ -112,7 +111,7 @@ namespace G6_TicTacToe
             foreach(Button btn in parentElem1.Children)
             {
                 btn.Text = "";
-                btn.BackgroundColor = Color.Gray;
+                btn.BackgroundColor = Color.LightGray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
@@ -121,7 +120,7 @@ namespace G6_TicTacToe
             foreach (Button btn in parentElem2.Children)
             {
                 btn.Text = "";
-                btn.BackgroundColor = Color.Gray;
+                btn.BackgroundColor = Color.LightGray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
@@ -130,7 +129,7 @@ namespace G6_TicTacToe
             foreach (Button btn in parentElem3.Children)
             {
                 btn.Text = "";
-                btn.BackgroundColor = Color.Gray;
+                btn.BackgroundColor = Color.LightGray;
                 btn.IsEnabled = true;
                 LabelX.Text = "X Player's turn";
                 LabelO.Text = "O Player waits";
